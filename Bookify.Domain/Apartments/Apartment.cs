@@ -1,4 +1,5 @@
 ﻿using Bookify.Domain.Abstractions;
+using Bookify.Domain.Shared;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,15 @@ namespace Bookify.Domain.Apartments
 {
     public sealed class Apartment :Entity
     {
-        public Apartment(Guid id) : base(id)
+        public Apartment(Guid id,
+            Name name,
+            Description description,
+            Address address,
+            Money price,
+            Money CleaningFee,
+            List<Amenity> amenities) : base(id)
         {
+
         }
 
         public Name Name { get; private set; }
@@ -19,13 +27,13 @@ namespace Bookify.Domain.Apartments
         public Address Address { get; private set; }
         
 
-       public Money price { get; private set; }
+       public Money Price { get; private set; }
         public Money CleaningFee { get; private set; }
 
 
         public DateTime?  LastBookonUtc { get; private set; }
 
-        public List<Amenity> amenities { get; private set; } = new();
+        public List<Amenity> Amenities { get; private set; } = new();
 
     }
 }
