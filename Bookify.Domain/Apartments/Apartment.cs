@@ -31,7 +31,7 @@ namespace Bookify.Domain.Apartments
         public Money CleaningFee { get; private set; }
 
 
-        public DateTime?  LastBookonUtc { get; private set; }
+        public DateTime?  LastBookedOnUtc { get; internal set; }
 
         public List<Amenity> Amenities { get; private set; } = new();
 

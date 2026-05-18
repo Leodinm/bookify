@@ -13,6 +13,6 @@ namespace Bookify.Domain.Bookings
         Rejected= 3,
         Cancelled = 4,
         Completed = 5,
-        Completed = 5,
+       
     }
 }
